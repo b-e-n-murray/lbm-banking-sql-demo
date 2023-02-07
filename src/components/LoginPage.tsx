@@ -3,14 +3,17 @@ import { useState } from "react";
 
 interface LoginPageProps {
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
-    setUserID: React.Dispatch<React.SetStateAction<number | undefined>>;
+  setUserID: React.Dispatch<React.SetStateAction<number | undefined>>;
 }
 
 function LoginPage(props: LoginPageProps): JSX.Element {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const url = "http://localhost:4000";
+  const url =
+    process.env.NODE_ENV === "production"
+      ? "https://lbm-banking-sia-demo.onrender.com/"
+      : "http://localhost:4000";
 
   async function handleLogin() {
     const fetchedUserData = await axios.get(
@@ -19,7 +22,7 @@ function LoginPage(props: LoginPageProps): JSX.Element {
     console.log(fetchedUserData);
     const userDataArr = fetchedUserData.data;
     console.log("userdataarr:", userDataArr);
-    props.setUserID(userDataArr[0].id)
+    props.setUserID(userDataArr[0].id);
     if (userDataArr.length > 0) {
       props.setLoggedIn(true);
     } else {
