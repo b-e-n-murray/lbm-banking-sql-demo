@@ -3,6 +3,7 @@ import { useState } from "react";
 
 interface LoginPageProps {
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+    setUserID: React.Dispatch<React.SetStateAction<number | undefined>>;
 }
 
 function LoginPage(props: LoginPageProps): JSX.Element {
@@ -18,6 +19,7 @@ function LoginPage(props: LoginPageProps): JSX.Element {
     console.log(fetchedUserData);
     const userDataArr = fetchedUserData.data;
     console.log("userdataarr:", userDataArr);
+    props.setUserID(userDataArr[0].id)
     if (userDataArr.length > 0) {
       props.setLoggedIn(true);
     } else {
