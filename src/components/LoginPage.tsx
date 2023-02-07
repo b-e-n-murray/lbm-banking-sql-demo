@@ -12,7 +12,7 @@ function LoginPage(props: LoginPageProps): JSX.Element {
 
   const url =
     process.env.NODE_ENV === "production"
-      ? "https://lbm-banking-sia-demo.onrender.com/"
+      ? "https://lbm-banking-sia-demo.onrender.com"
       : "http://localhost:4000";
 
   async function handleLogin() {
