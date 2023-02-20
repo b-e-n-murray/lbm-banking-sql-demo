@@ -3,7 +3,7 @@
 <hr />
 <p>This is the front-end repository for a full-stack application I built to demonstrate how SQL Injection attacks can be performed. The concept of this app is a fake banking website that deliberately lacks proper authentication and includes sql vulnerabilities on the backend. I also delivered a presentation on this project, the slides for which can be found in the link below:</p>
 <a href="https://docs.google.com/presentation/d/1rBeQOZD_h6bLDL3jVN5v8S1303IfNL869tVSoXrRygU/edit?usp=sharing">Presentation Slides</a>
-<h3>How to use</h3>
+<h2>How to use</h2>
 <p>Follow the link below (you may need to wait momentarily as the server wakes up)</p>
 <a href="https://lbm-banking.netlify.app/">LBM Banking</a>
 <hr />
@@ -19,5 +19,5 @@
 <p>And voila! If you check your console, you should see the data for all the users! And if you were really sneaky, you might even now login with the admin account to see if there are any extra privileges...</p>
 
 
-<p>**DISCLAIMER: All data used in this project is completely fake and was only created for the purposes of this demonstrative application. No real user data/money is at risk in the use of this app.</p>
+<i>**DISCLAIMER: All data used in this project is completely fake and was only created for the purposes of this demonstrative application. No real user data/money is at risk in the use of this app.</i>
 
